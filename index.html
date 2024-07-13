@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.Css">
+</head>
+<body>
+    <header class="header">
+        <a  href="#" class="logo">logo</a>
+        <nav class="navbar">
+            <a href="#" class="Home" style="--i:1;">Home</a>
+            <a href="#" style="--i:2;">About</a>
+            <a href="#" style="--i:3;">Updates</a>
+            <a href="#" style="--i:5;">contact</a>
+        </nav>
+        <a href="#" class="login">login</a> 
+    </header>
+
+    <div class="home">
+        <div class="home-img">
+
+            <div class="formpage">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="entryFiled">
+                        <input type="email" placeholder="abcd@gmail.com" required>
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </div>
+        
+                    <div class="entryFiled">
+                        <input type="password" placeholder="az5#67m" required>
+                        <span><i class="fa-solid fa-key"></i></span>
+                    </div>
+                    <div class="RemForPw">
+                        <p><input type="checkbox">Rember me</p>
+                        <a href="#" class="forgetPassword"> forget Password ?</a>
+                    </div>
+                    <div class="entryFiled">
+                        <input type="submit" value="login">
+                    </div>
+                    <div class="newAccount">
+                        <a href="#" class="singup">Sing up now</a>
+                    </div>
+                </form>
+            </div>
+
+            <img src="123/OIP.jpg" alt="photo">
+
+        </div>
+    </div>
+    
+    <script>
+        const cancelBtn= document.querySelector('.cancelBtn');
+        const loginBtn= document.querySelector('.loginbtn');
+        const formPage= document.querySelector('.formpage');
+        loginBtn.addEventListener('click',()=>{
+            loginBtn.style.dispaly ="none";
+            cancelBtn.style.dispaly="block";
+            formPage.style.dispaly ="1";
+            formPage.style.transition= "0.3s ease-in";
+        });
+        cancelBtn.addEventListener('click',()=>{
+        cancelBtn.style.dispaly="none";
+        loginBtn.style.dispaly="block";
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+body{
+    background-color: #1f242d;
+    color: #fff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 3%;
+    align-items: center;
+    background-color: black;
+}
+.header .logo{
+    font-size: 26px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0;
+    animation: SlideRight 1s forwards ease;
+}
+.header .navbar a,.header .login{
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 25px;
+    color: #fff;
+    opacity: 0;
+    animation: SlideTop 2s forwards ease-in-out ;  
+    animation-delay: calc(.2s*var(--i));
+}
+.header .logo:hover{
+    cursor: default;
+}
+.header .navbar a:hover,.header .navbar .Home{
+    color: #0ef;
+}
+.header .login:hover{
+    color:chartreuse;
+}
+.home .home-img img{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.formpage{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100% - 80px);
+    height: 100%;
+    backdrop-filter: blur(8px) brightness(35%);
+}
+form h2{
+    text-align: center;
+    font-size: 6em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.entryFiled{
+    position: relative;
+    height: 90px;
+    width: 700px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.entryFiled input{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(254,254,254,0.6);
+    background-color: transparent;
+}
+.entryFiled input[type="email"], .entryFiled input[type="password"]{
+    font-size: 1.5em;
+    padding-left:30px;
+    padding-right: 120px;
+    color: green;
+}
+.entryFiled span{
+    position: absolute;
+    font-size: 2em;
+    right:0;
+    top: 50%;
+    translate: 0-50%;
+    padding: 5px 30px;
+    border-left: 2px solid rgba(254,254,254,0.6);
+}
+
+.entryFiled input[type="email"]:focus, .entryFiled input[type="password"]:focus{
+    scale: 1.1;
+    border: 3px solid #00ff7f;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.entryFiled input[type="submit"]{
+    color: #000;
+    background-color: #fff;
+    font-size: 2em;
+}
+
+.entryFiled input[type="submit"]:focus{
+    color: #fff;
+    background-color: #00ff7f;
+    cursor: pointer;
+    border: none;
+}
+.RemForPw{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+.RemForPw input{
+    margin-right: 10px;
+}
+.RemForPw a{
+    color: #fff;
+}
+.newAccount{
+    text-align: center;
+    font-size: 1.3em;
+}
+.newAccount a{
+    text-decoration: none;
+    color: #18a2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes SlideRight{
+    0%{
+        transform: translateX(-240px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideTop{
+    0%{
+        transform: translateY(-240px);
+        opacity: 0; 
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
